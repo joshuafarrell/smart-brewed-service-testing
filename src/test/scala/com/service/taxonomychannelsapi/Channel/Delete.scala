@@ -1,4 +1,4 @@
-package com.service.tagsapi.tags
+package com.service.taxonomychannelsapi.Channel
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
@@ -9,7 +9,14 @@ object Delete {
   )
 
   val byId = exec(http("DELETE_byId")
-    .delete("/tags/1")
+    .delete("/channel/1")
+    .headers(headers)
+    .check(status.is(200))
+
+  )
+
+  val extras = exec(http("DELETE_extras")
+    .delete("/channel/extras/1")
     .headers(headers)
     .check(status.is(200))
 
