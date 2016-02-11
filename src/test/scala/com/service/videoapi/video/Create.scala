@@ -1,4 +1,4 @@
-package com.service.taxonomychannelsapi.channel
+package com.service.videoapi.video
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
@@ -9,7 +9,7 @@ object Create {
   )
 
   val create = exec(http("POST_create")
-    .post("/channel")
+    .post("/videos")
     .headers(headers)
     .body(StringBody(
       """{

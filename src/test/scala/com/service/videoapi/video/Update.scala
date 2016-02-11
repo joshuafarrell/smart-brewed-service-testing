@@ -1,4 +1,4 @@
-package com.service.taxonomychannelsapi.channel
+package com.service.videoapi.video
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
@@ -8,8 +8,8 @@ object Update {
     "content-type" -> "application/json; charset=utf-8"
   )
 
-  val byId = exec(http("PATCH_byId")
-    .patch("/channel/1")
+  val byId = exec(http("PUT_byId")
+    .put("/videos/1")
     .headers(headers)
     .body(StringBody(
       """{

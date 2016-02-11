@@ -1,4 +1,4 @@
-package com.service.taxonomychannelsapi.channel
+package com.service.videoapi.video
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
@@ -8,27 +8,22 @@ object Get {
     "content-type" -> "application/json; charset=utf-8"
   )
 
-  val byId = exec(http("GET_byId")
-    .get("/channel/1")
+  val byIdOrSlug = exec(http("GET_byIdOrSlug")
+    .get("/videos/1")
     .headers(headers)
     .check(status.is(200))
   )
 
-  val find = exec(http("GET_find")
-    .get("/channel/find")
+  val search = exec(http("GET_search")
+    .get("/videos/search")
     .headers(headers)
     .check(status.is(200))
   )
 
   val byJson = exec(http("GET_byJson")
-      .get("/channel/json")
+      .get("/videos/json")
       .headers(headers)
       .check(status.is(200))
   )
 
-  val byMatch = exec(http("GET_match")
-    .get("/channel/match")
-    .headers(headers)
-    .check(status.is(200))
-  )
 }
