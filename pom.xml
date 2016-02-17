@@ -84,6 +84,9 @@
                         <goals>
                             <goal>execute</goal>
                         </goals>
+                        <configuration>
+                            <simulationsFolder>src/test/scala</simulationsFolder>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
