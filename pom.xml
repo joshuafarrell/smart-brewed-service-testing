@@ -85,7 +85,7 @@
                             <goal>execute</goal>
                         </goals>
                         <configuration>
-                            <simulationsFolder>src/test/scala</simulationsFolder>
+                            <simulationsFolder>src\test\scala\com\http\sheknows</simulationsFolder>
                         </configuration>
                     </execution>
                 </executions>
