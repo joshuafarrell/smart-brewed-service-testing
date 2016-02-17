@@ -7,14 +7,14 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
-        <scala.version>2.11.6</scala.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <scala.version>2.11.7</scala.version>
         <encoding>UTF-8</encoding>
 
         <gatling.version>2.2.0-M2</gatling.version>
 
-        <scala-maven-plugin.version>3.2.0</scala-maven-plugin.version>
+        <scala-maven-plugin.version>3.2.2</scala-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -46,6 +46,7 @@
         <dependency>
             <groupId>io.gatling.highcharts</groupId>
             <artifactId>gatling-charts-highcharts</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.gatling</groupId>
@@ -73,27 +74,6 @@
             </plugins>
         </pluginManagement>
         <plugins>
-            <plugin>
-                <groupId>net.alchim31.maven</groupId>
-                <artifactId>scala-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>testCompile</goal>
-                        </goals>
-                        <configuration>
-                            <args>
-                                <arg>-target:jvm-1.7</arg>
-                                <arg>-deprecation</arg>
-                                <arg>-feature</arg>
-                                <arg>-unchecked</arg>
-                                <arg>-language:implicitConversions</arg>
-                                <arg>-language:postfixOps</arg>
-                            </args>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
             <plugin>
                 <groupId>io.gatling</groupId>
                 <artifactId>gatling-maven-plugin</artifactId>
