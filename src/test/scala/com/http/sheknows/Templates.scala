@@ -10,6 +10,7 @@ object Templates {
     .exec(http("${template} - ${url}")
     .get("${url}")
     .check(
+      status.is(200),
       css("#sf-resetcontent > h1")
       .notExists
     )

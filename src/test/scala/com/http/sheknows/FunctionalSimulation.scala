@@ -5,9 +5,9 @@ import io.gatling.http.Predef._
 
 class FunctionalSimulation extends Simulation {
 
-  var userTotal : Int = 20
+  var userTotal : Int = 21
 
-  val httpProtocol = http.baseURL("http://sandbox.sheknows.com")
+  val httpProtocol = http.baseURL("http://staging.sheknows.com")
     .proxy(Proxy("127.0.0.1", 59753).httpsPort(59753))
 
   /*
