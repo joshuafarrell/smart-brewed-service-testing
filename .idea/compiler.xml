@@ -22,10 +22,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="smart-brewed-service-testing" />
         <module name="smartbrewedservicetesting" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="smart-brewed-service-testing" target="1.8" />
       <module name="smartbrewedservicetesting" target="1.8" />
     </bytecodeTargetLevel>
   </component>

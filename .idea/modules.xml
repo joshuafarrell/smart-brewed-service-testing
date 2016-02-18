@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/smartbrewedservicetesting.iml" filepath="$PROJECT_DIR$/smartbrewedservicetesting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-brewed-service-testing.iml" filepath="$PROJECT_DIR$/smart-brewed-service-testing.iml" />
     </modules>
   </component>
 </project>
